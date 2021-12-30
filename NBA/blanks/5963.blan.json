@@ -1,72 +1,571 @@
 {
-		"Ar40":{
-				"error":9.9559,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBA5961"
-						}
-				],
-				"value":1984.0497
-				},
-		"Ar39":{
-				"error":3.6203,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBA5961"
-						}
-				],
-				"value":95.2455
-				},
-		"Ar37":{
-				"error":13.1955,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBA5961"
-						}
-				],
-				"value":66.6775
-				},
-		"Ar36":{
-				"error":0.5081,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBA5961"
-						}
-				],
-				"value":13.2389
-				},
-		"Ar38":{
-				"error":2.8936,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBA5961"
-						}
-				],
-				"value":0.059557
-				},
-		"Ar36b":{
-				"error":13.1466,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBA5961"
-						}
-				],
-				"value":8.2737
-				},
-		"Ar39b":{
-				"error":2.6856,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBA5961"
-						}
-				],
-				"value":6.2264
-				}
-		}
+    "Ar36": {
+        "error": 0.3861355190723414,
+        "fit": "Bracketing Average",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19086A",
+                "uuid": "NBA5949"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19087A",
+                "uuid": "NBA5952"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19088A",
+                "uuid": "NBA5956"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19089A",
+                "uuid": "NBA5961"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19090A",
+                "uuid": "NBA5966"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19091A",
+                "uuid": "NBA5971"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19092A",
+                "uuid": "NBA5976"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19093A",
+                "uuid": "NBA5981"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19094A",
+                "uuid": "NBA5986"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19095A",
+                "uuid": "NBA5991"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19096A",
+                "uuid": "NBA5996"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19097A",
+                "uuid": "NBA6001"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19098A",
+                "uuid": "NBA6006"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19099A",
+                "uuid": "NBA6011"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19100A",
+                "uuid": "NBA6017"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19101A",
+                "uuid": "NBA6022"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19102A",
+                "uuid": "NBA6027"
+            }
+        ],
+        "reviewed": true,
+        "value": 14.044046662047478
+    },
+    "Ar36b": {
+        "error": 1.1084151133413505,
+        "fit": "Bracketing Average",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19086A",
+                "uuid": "NBA5949"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19087A",
+                "uuid": "NBA5952"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19088A",
+                "uuid": "NBA5956"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19089A",
+                "uuid": "NBA5961"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19090A",
+                "uuid": "NBA5966"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19091A",
+                "uuid": "NBA5971"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19092A",
+                "uuid": "NBA5976"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19093A",
+                "uuid": "NBA5981"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19094A",
+                "uuid": "NBA5986"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19095A",
+                "uuid": "NBA5991"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19096A",
+                "uuid": "NBA5996"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19097A",
+                "uuid": "NBA6001"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19098A",
+                "uuid": "NBA6006"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19099A",
+                "uuid": "NBA6011"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19100A",
+                "uuid": "NBA6017"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19101A",
+                "uuid": "NBA6022"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19102A",
+                "uuid": "NBA6027"
+            }
+        ],
+        "reviewed": true,
+        "value": 207.79887255464223
+    },
+    "Ar37": {
+        "error": 1.2916116130196427,
+        "fit": "Bracketing Average",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19086A",
+                "uuid": "NBA5949"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19087A",
+                "uuid": "NBA5952"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19088A",
+                "uuid": "NBA5956"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19089A",
+                "uuid": "NBA5961"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19090A",
+                "uuid": "NBA5966"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19091A",
+                "uuid": "NBA5971"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19092A",
+                "uuid": "NBA5976"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19093A",
+                "uuid": "NBA5981"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19094A",
+                "uuid": "NBA5986"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19095A",
+                "uuid": "NBA5991"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19096A",
+                "uuid": "NBA5996"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19097A",
+                "uuid": "NBA6001"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19098A",
+                "uuid": "NBA6006"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19099A",
+                "uuid": "NBA6011"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19100A",
+                "uuid": "NBA6017"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19101A",
+                "uuid": "NBA6022"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19102A",
+                "uuid": "NBA6027"
+            }
+        ],
+        "reviewed": true,
+        "value": 74.30929074463437
+    },
+    "Ar38": {
+        "error": 0.33129170662484597,
+        "fit": "Bracketing Average",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19086A",
+                "uuid": "NBA5949"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19087A",
+                "uuid": "NBA5952"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19088A",
+                "uuid": "NBA5956"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19089A",
+                "uuid": "NBA5961"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19090A",
+                "uuid": "NBA5966"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19091A",
+                "uuid": "NBA5971"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19092A",
+                "uuid": "NBA5976"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19093A",
+                "uuid": "NBA5981"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19094A",
+                "uuid": "NBA5986"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19095A",
+                "uuid": "NBA5991"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19096A",
+                "uuid": "NBA5996"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19097A",
+                "uuid": "NBA6001"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19098A",
+                "uuid": "NBA6006"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19099A",
+                "uuid": "NBA6011"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19100A",
+                "uuid": "NBA6017"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19101A",
+                "uuid": "NBA6022"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19102A",
+                "uuid": "NBA6027"
+            }
+        ],
+        "reviewed": true,
+        "value": 10.269889020735011
+    },
+    "Ar39": {
+        "error": 1.61278758175812,
+        "fit": "Bracketing Average",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19086A",
+                "uuid": "NBA5949"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19087A",
+                "uuid": "NBA5952"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19088A",
+                "uuid": "NBA5956"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19089A",
+                "uuid": "NBA5961"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19090A",
+                "uuid": "NBA5966"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19091A",
+                "uuid": "NBA5971"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19092A",
+                "uuid": "NBA5976"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19093A",
+                "uuid": "NBA5981"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19094A",
+                "uuid": "NBA5986"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19095A",
+                "uuid": "NBA5991"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19096A",
+                "uuid": "NBA5996"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19097A",
+                "uuid": "NBA6001"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19098A",
+                "uuid": "NBA6006"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19099A",
+                "uuid": "NBA6011"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19100A",
+                "uuid": "NBA6017"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19101A",
+                "uuid": "NBA6022"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19102A",
+                "uuid": "NBA6027"
+            }
+        ],
+        "reviewed": true,
+        "value": 93.16901695814363
+    },
+    "Ar39b": {
+        "error": 2.6856,
+        "fit": "Previous",
+        "references": [
+            {
+                "exclude": "false",
+                "runid": "NBA5961"
+            }
+        ],
+        "value": 6.2264
+    },
+    "Ar40": {
+        "error": 7.110480398430371,
+        "fit": "Bracketing Average",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19086A",
+                "uuid": "NBA5949"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19087A",
+                "uuid": "NBA5952"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19088A",
+                "uuid": "NBA5956"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19089A",
+                "uuid": "NBA5961"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19090A",
+                "uuid": "NBA5966"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19091A",
+                "uuid": "NBA5971"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19092A",
+                "uuid": "NBA5976"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19093A",
+                "uuid": "NBA5981"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19094A",
+                "uuid": "NBA5986"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19095A",
+                "uuid": "NBA5991"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19096A",
+                "uuid": "NBA5996"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19097A",
+                "uuid": "NBA6001"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19098A",
+                "uuid": "NBA6006"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-19099A",
+                "uuid": "NBA6011"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19100A",
+                "uuid": "NBA6017"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19101A",
+                "uuid": "NBA6022"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-19102A",
+                "uuid": "NBA6027"
+            }
+        ],
+        "reviewed": true,
+        "value": 1981.8925482637176
+    }
+}
