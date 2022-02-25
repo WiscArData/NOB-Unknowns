@@ -9,7 +9,7 @@
             "use_iqr_filtering": false,
             "use_standard_deviation_filtering": true
         },
-        "fit": "Linear",
+        "fit": "linear",
         "fn": 224,
         "include_baseline_error": false,
         "n": 230,
@@ -35,7 +35,7 @@
             "use_iqr_filtering": false,
             "use_standard_deviation_filtering": true
         },
-        "fit": "Linear",
+        "fit": "linear",
         "fn": 229,
         "include_baseline_error": false,
         "n": 240,
@@ -57,7 +57,7 @@
         "value": 707.8092282352925
     },
     "Ar37": {
-        "error": 11.8095707477638,
+        "error": 12.560526075208573,
         "error_type": "SEM",
         "filter_outliers_dict": {
             "filter_outliers": true,
@@ -66,14 +66,21 @@
             "use_iqr_filtering": false,
             "use_standard_deviation_filtering": true
         },
-        "fit": "Linear",
-        "fn": 240,
+        "fit": "linear",
+        "fn": 160,
         "include_baseline_error": false,
         "n": 240,
-        "outlier_excluded": [],
+        "outlier_excluded": [
+            161,
+            162,
+            163,
+            164,
+            165,
+            168
+        ],
         "reviewed": true,
         "user_excluded": [],
-        "value": 5853.230243396486
+        "value": 5850.573217025734
     },
     "Ar38": {
         "error": 1.4823307674995754,
@@ -85,7 +92,7 @@
             "use_iqr_filtering": false,
             "use_standard_deviation_filtering": true
         },
-        "fit": "Linear",
+        "fit": "linear",
         "fn": 236,
         "include_baseline_error": false,
         "n": 245,
@@ -114,7 +121,7 @@
             "use_iqr_filtering": false,
             "use_standard_deviation_filtering": true
         },
-        "fit": "Linear",
+        "fit": "linear",
         "fn": 240,
         "include_baseline_error": false,
         "n": 240,
@@ -143,7 +150,7 @@
             "use_iqr_filtering": false,
             "use_standard_deviation_filtering": true
         },
-        "fit": "Linear",
+        "fit": "linear",
         "fn": 220,
         "include_baseline_error": false,
         "n": 220,
