@@ -1,72 +1,764 @@
 {
-		"Ar40":{
-				"error":9.5314,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBE5203"
-						}
-				],
-				"value":4160.1964
-				},
-		"Ar39":{
-				"error":3.3882,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBE5203"
-						}
-				],
-				"value":101.103
-				},
-		"Ar37":{
-				"error":4.2062,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBE5203"
-						}
-				],
-				"value":22.414
-				},
-		"Ar36":{
-				"error":0.59638,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBE5203"
-						}
-				],
-				"value":21.4013
-				},
-		"Ar38":{
-				"error":2.5532,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBE5203"
-						}
-				],
-				"value":0.4472
-				},
-		"Ar36b":{
-				"error":4.1391,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBE5203"
-						}
-				],
-				"value":7.5325
-				},
-		"Ar39b":{
-				"error":2.4146,
-				"fit":"Previous",
-				"references":[{
-						"exclude":"false",
-						"runid":"NBE5203"
-						}
-				],
-				"value":7.0235
-				}
-		}
+    "Ar36": {
+        "error": 0.36170654980175143,
+        "fit": "Bracketing Interpolate",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29136A",
+                "uuid": "NBE5109"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29137A",
+                "uuid": "NBE5112"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29138A",
+                "uuid": "NBE5115"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29139A",
+                "uuid": "NBE5119"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29140A",
+                "uuid": "NBE5123"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29141A",
+                "uuid": "NBE5128"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29142A",
+                "uuid": "NBE5133"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29143A",
+                "uuid": "NBE5138"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29144A",
+                "uuid": "NBE5143"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29145A",
+                "uuid": "NBE5148"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29146A",
+                "uuid": "NBE5153"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29147A",
+                "uuid": "NBE5158"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29148A",
+                "uuid": "NBE5163"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29149A",
+                "uuid": "NBE5168"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29150A",
+                "uuid": "NBE5173"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29151A",
+                "uuid": "NBE5178"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29152A",
+                "uuid": "NBE5183"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29153A",
+                "uuid": "NBE5188"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29154A",
+                "uuid": "NBE5193"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29155A",
+                "uuid": "NBE5198"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29156A",
+                "uuid": "NBE5203"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29157A",
+                "uuid": "NBE5208"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29158A",
+                "uuid": "NBE5213"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29159A",
+                "uuid": "NBE5218"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29160A",
+                "uuid": "NBE5223"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29161A",
+                "uuid": "NBE5228"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29162A",
+                "uuid": "NBE5233"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29163A",
+                "uuid": "NBE5238"
+            }
+        ],
+        "reviewed": true,
+        "value": 12.117551114205984
+    },
+    "Ar36b": {
+        "error": 4.1391,
+        "fit": "Previous",
+        "references": [
+            {
+                "exclude": "false",
+                "runid": "NBE5203"
+            }
+        ],
+        "value": 7.5325
+    },
+    "Ar37": {
+        "error": 0.5913426134785011,
+        "fit": "Bracketing Interpolate",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29136A",
+                "uuid": "NBE5109"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29137A",
+                "uuid": "NBE5112"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29138A",
+                "uuid": "NBE5115"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29139A",
+                "uuid": "NBE5119"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29140A",
+                "uuid": "NBE5123"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29141A",
+                "uuid": "NBE5128"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29142A",
+                "uuid": "NBE5133"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29143A",
+                "uuid": "NBE5138"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29144A",
+                "uuid": "NBE5143"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29145A",
+                "uuid": "NBE5148"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29146A",
+                "uuid": "NBE5153"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29147A",
+                "uuid": "NBE5158"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29148A",
+                "uuid": "NBE5163"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29149A",
+                "uuid": "NBE5168"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29150A",
+                "uuid": "NBE5173"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29151A",
+                "uuid": "NBE5178"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29152A",
+                "uuid": "NBE5183"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29153A",
+                "uuid": "NBE5188"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29154A",
+                "uuid": "NBE5193"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29155A",
+                "uuid": "NBE5198"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29156A",
+                "uuid": "NBE5203"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29157A",
+                "uuid": "NBE5208"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29158A",
+                "uuid": "NBE5213"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29159A",
+                "uuid": "NBE5218"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29160A",
+                "uuid": "NBE5223"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29161A",
+                "uuid": "NBE5228"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29162A",
+                "uuid": "NBE5233"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29163A",
+                "uuid": "NBE5238"
+            }
+        ],
+        "reviewed": true,
+        "value": 23.177346807174438
+    },
+    "Ar38": {
+        "error": 0.3493274224190952,
+        "fit": "Bracketing Interpolate",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29136A",
+                "uuid": "NBE5109"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29137A",
+                "uuid": "NBE5112"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29138A",
+                "uuid": "NBE5115"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29139A",
+                "uuid": "NBE5119"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29140A",
+                "uuid": "NBE5123"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29141A",
+                "uuid": "NBE5128"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29142A",
+                "uuid": "NBE5133"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29143A",
+                "uuid": "NBE5138"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29144A",
+                "uuid": "NBE5143"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29145A",
+                "uuid": "NBE5148"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29146A",
+                "uuid": "NBE5153"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29147A",
+                "uuid": "NBE5158"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29148A",
+                "uuid": "NBE5163"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29149A",
+                "uuid": "NBE5168"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29150A",
+                "uuid": "NBE5173"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29151A",
+                "uuid": "NBE5178"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29152A",
+                "uuid": "NBE5183"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29153A",
+                "uuid": "NBE5188"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29154A",
+                "uuid": "NBE5193"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29155A",
+                "uuid": "NBE5198"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29156A",
+                "uuid": "NBE5203"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29157A",
+                "uuid": "NBE5208"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29158A",
+                "uuid": "NBE5213"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29159A",
+                "uuid": "NBE5218"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29160A",
+                "uuid": "NBE5223"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29161A",
+                "uuid": "NBE5228"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29162A",
+                "uuid": "NBE5233"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29163A",
+                "uuid": "NBE5238"
+            }
+        ],
+        "reviewed": true,
+        "value": 11.726325806576135
+    },
+    "Ar39": {
+        "error": 2.0472012272064823,
+        "fit": "Bracketing Interpolate",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29136A",
+                "uuid": "NBE5109"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29137A",
+                "uuid": "NBE5112"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29138A",
+                "uuid": "NBE5115"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29139A",
+                "uuid": "NBE5119"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29140A",
+                "uuid": "NBE5123"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29141A",
+                "uuid": "NBE5128"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29142A",
+                "uuid": "NBE5133"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29143A",
+                "uuid": "NBE5138"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29144A",
+                "uuid": "NBE5143"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29145A",
+                "uuid": "NBE5148"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29146A",
+                "uuid": "NBE5153"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29147A",
+                "uuid": "NBE5158"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29148A",
+                "uuid": "NBE5163"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29149A",
+                "uuid": "NBE5168"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29150A",
+                "uuid": "NBE5173"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29151A",
+                "uuid": "NBE5178"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29152A",
+                "uuid": "NBE5183"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29153A",
+                "uuid": "NBE5188"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29154A",
+                "uuid": "NBE5193"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29155A",
+                "uuid": "NBE5198"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29156A",
+                "uuid": "NBE5203"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29157A",
+                "uuid": "NBE5208"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29158A",
+                "uuid": "NBE5213"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29159A",
+                "uuid": "NBE5218"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29160A",
+                "uuid": "NBE5223"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29161A",
+                "uuid": "NBE5228"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29162A",
+                "uuid": "NBE5233"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29163A",
+                "uuid": "NBE5238"
+            }
+        ],
+        "reviewed": true,
+        "value": 83.50982607749845
+    },
+    "Ar39b": {
+        "error": 2.4146,
+        "fit": "Previous",
+        "references": [
+            {
+                "exclude": "false",
+                "runid": "NBE5203"
+            }
+        ],
+        "value": 7.0235
+    },
+    "Ar40": {
+        "error": 7.76010320257544,
+        "fit": "Bracketing Interpolate",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29136A",
+                "uuid": "NBE5109"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29137A",
+                "uuid": "NBE5112"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29138A",
+                "uuid": "NBE5115"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29139A",
+                "uuid": "NBE5119"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29140A",
+                "uuid": "NBE5123"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29141A",
+                "uuid": "NBE5128"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29142A",
+                "uuid": "NBE5133"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29143A",
+                "uuid": "NBE5138"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29144A",
+                "uuid": "NBE5143"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29145A",
+                "uuid": "NBE5148"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29146A",
+                "uuid": "NBE5153"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29147A",
+                "uuid": "NBE5158"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29148A",
+                "uuid": "NBE5163"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29149A",
+                "uuid": "NBE5168"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29150A",
+                "uuid": "NBE5173"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29151A",
+                "uuid": "NBE5178"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29152A",
+                "uuid": "NBE5183"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29153A",
+                "uuid": "NBE5188"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29154A",
+                "uuid": "NBE5193"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29155A",
+                "uuid": "NBE5198"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "NBlank1-29156A",
+                "uuid": "NBE5203"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29157A",
+                "uuid": "NBE5208"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29158A",
+                "uuid": "NBE5213"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29159A",
+                "uuid": "NBE5218"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29160A",
+                "uuid": "NBE5223"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29161A",
+                "uuid": "NBE5228"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29162A",
+                "uuid": "NBE5233"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBlank1-29163A",
+                "uuid": "NBE5238"
+            }
+        ],
+        "reviewed": true,
+        "value": 2134.4353722946967
+    }
+}
