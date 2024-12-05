@@ -1,42 +1,117 @@
 {
-		"IC0":{
-				"value":10.100002900000002,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":2.7668703178087313,
-				"errortype":"std"
-				},
-		"IC1":{
-				"value":12.333340333333334,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":2.1213238790955518,
-				"errortype":"std"
-				},
-		"IC2":{
-				"value":123.80062000000001,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":10.799276107920893,
-				"errortype":"std"
-				},
-		"IC3":{
-				"value":0.22222222222222221,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":0.44095855184409843,
-				"errortype":"std"
-				},
-		"FC":{
-				"value":-0.0029641717999999997,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":4.680808550714763E-5,
-				"errortype":"std"
-				}
-		}
+    "FC": {
+        "error": 4.680808550714763e-05,
+        "errortype": "std",
+        "filter_outliers_dict": [],
+        "fit": "mean",
+        "value": -0.0029641717999999997
+    },
+    "IC0": {
+        "error": 2.7668703178087313,
+        "errortype": "std",
+        "filter_outliers_dict": [],
+        "fit": "mean",
+        "value": 10.100002900000002
+    },
+    "IC1": {
+        "error": 2.1213238790955518,
+        "errortype": "std",
+        "filter_outliers_dict": [],
+        "fit": "mean",
+        "value": 12.333340333333334
+    },
+    "IC2": {
+        "error": 10.799276107920893,
+        "errortype": "std",
+        "filter_outliers_dict": [],
+        "fit": "mean",
+        "value": 123.80062000000001
+    },
+    "IC3": {
+        "error": 0.44095855184409843,
+        "errortype": "std",
+        "filter_outliers_dict": [],
+        "fit": "mean",
+        "value": 0.2222222222222222
+    },
+    "S101IC0-": {
+        "error": 0.8749611776315446,
+        "error_type": "SEM",
+        "filter_outliers_dict": {
+            "filter_outliers": true,
+            "iterations": 1,
+            "std_devs": 2,
+            "use_iqr_filtering": false,
+            "use_standard_deviation_filtering": true
+        },
+        "fit": "average",
+        "fn": 10,
+        "include_baseline_error": false,
+        "n": 10,
+        "outlier_excluded": [],
+        "reviewed": true,
+        "user_excluded": [],
+        "value": 10.100002765655518
+    },
+    "S101IC1-": {
+        "error": 0.707107905103115,
+        "error_type": "SEM",
+        "filter_outliers_dict": {
+            "filter_outliers": true,
+            "iterations": 1,
+            "std_devs": 2,
+            "use_iqr_filtering": false,
+            "use_standard_deviation_filtering": true
+        },
+        "fit": "average",
+        "fn": 9,
+        "include_baseline_error": false,
+        "n": 10,
+        "outlier_excluded": [
+            1
+        ],
+        "reviewed": true,
+        "user_excluded": [],
+        "value": 12.333340009053549
+    },
+    "S101IC2-": {
+        "error": 3.415030324369388,
+        "error_type": "SEM",
+        "filter_outliers_dict": {
+            "filter_outliers": true,
+            "iterations": 1,
+            "std_devs": 2,
+            "use_iqr_filtering": false,
+            "use_standard_deviation_filtering": true
+        },
+        "fit": "average",
+        "fn": 10,
+        "include_baseline_error": false,
+        "n": 10,
+        "outlier_excluded": [],
+        "reviewed": true,
+        "user_excluded": [],
+        "value": 123.8006217956543
+    },
+    "S101IC3-": {
+        "error": 0.1469861839480328,
+        "error_type": "SEM",
+        "filter_outliers_dict": {
+            "filter_outliers": true,
+            "iterations": 1,
+            "std_devs": 2,
+            "use_iqr_filtering": false,
+            "use_standard_deviation_filtering": true
+        },
+        "fit": "average",
+        "fn": 9,
+        "include_baseline_error": false,
+        "n": 10,
+        "outlier_excluded": [
+            0
+        ],
+        "reviewed": true,
+        "user_excluded": [],
+        "value": 0.2222222222222222
+    }
+}
