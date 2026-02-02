@@ -1,32 +1,89 @@
 {
-		"ic0":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"ic1":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"ic2":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"ic3":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"fc":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				}
-		}
+    "S101IC0-": {
+        "error": 8.132331489653605e-05,
+        "fit": "Linear",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "Cocktail-92A",
+                "uuid": "NBG0430"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "Cocktail-50A",
+                "uuid": "NBG0435"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "Cocktail-50A",
+                "uuid": "NBG0438"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "Cocktail-50A",
+                "uuid": "NBG0442"
+            }
+        ],
+        "reviewed": true,
+        "standard_ratio": 0.0524522,
+        "value": 1.0954862364539026
+    },
+    "S101IC3-": {
+        "error": 0.009125756323639782,
+        "fit": "Bracketing Interpolate",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "Cocktail-92A",
+                "uuid": "NBG0430"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "Cocktail-50A",
+                "uuid": "NBG0435"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "Cocktail-50A",
+                "uuid": "NBG0438"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "Cocktail-50A",
+                "uuid": "NBG0442"
+            }
+        ],
+        "reviewed": true,
+        "standard_ratio": 81.30494,
+        "value": 0.925888292762753
+    },
+    "S102IC2-": {
+        "error": 0.03135821637702397,
+        "fit": "Weighted Mean",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "Cocktail-92A",
+                "uuid": "NBG0430"
+            },
+            {
+                "exclude": "omit",
+                "record_id": "Cocktail-50A",
+                "uuid": "NBG0435"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "Cocktail-50A",
+                "uuid": "NBG0438"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "Cocktail-50A",
+                "uuid": "NBG0442"
+            }
+        ],
+        "reviewed": true,
+        "standard_ratio": 1.2035,
+        "value": 1.674818725832077
+    }
+}
