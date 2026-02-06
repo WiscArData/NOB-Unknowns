@@ -1,32 +1,74 @@
 {
-		"ic0":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"ic1":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"ic2":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"ic3":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"fc":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				}
-		}
+    "S101IC0-": {
+        "error": 0.001230560129471106,
+        "fit": "Bracketing Interpolate",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-202A",
+                "uuid": "NBG0632"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-203A",
+                "uuid": "NBG0635"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-204A",
+                "uuid": "NBG0638"
+            }
+        ],
+        "reviewed": true,
+        "standard_ratio": 0.0524511,
+        "value": 1.1029156950856425
+    },
+    "S101IC3-": {
+        "error": 0.01272129237248642,
+        "fit": "Bracketing Interpolate",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-202A",
+                "uuid": "NBG0632"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-203A",
+                "uuid": "NBG0635"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-204A",
+                "uuid": "NBG0638"
+            }
+        ],
+        "reviewed": true,
+        "standard_ratio": 81.30321,
+        "value": 0.8937209955387967
+    },
+    "S102IC2-": {
+        "error": 0.03195270267076026,
+        "fit": "Weighted Mean",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-202A",
+                "uuid": "NBG0632"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-203A",
+                "uuid": "NBG0635"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-204A",
+                "uuid": "NBG0638"
+            }
+        ],
+        "reviewed": true,
+        "standard_ratio": 1.2035,
+        "value": 1.7131668210167303
+    }
+}
