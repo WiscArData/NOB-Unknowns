@@ -1,32 +1,59 @@
 {
-		"ic0":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"ic1":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"ic2":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"ic3":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				},
-		"fc":{
-				"error":1E-20,
-				"fit":"default",
-				"references":null,
-				"value":1
-				}
-		}
+    "S101IC0-": {
+        "error": 0.0012038266157043777,
+        "fit": "Bracketing Interpolate",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-422A",
+                "uuid": "NBG1410"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-423A",
+                "uuid": "NBG1414"
+            }
+        ],
+        "reviewed": true,
+        "standard_ratio": 0.0519622,
+        "value": 1.1212437169494391
+    },
+    "S101IC3-": {
+        "error": 0.012976594501171525,
+        "fit": "Bracketing Interpolate",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-422A",
+                "uuid": "NBG1410"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-423A",
+                "uuid": "NBG1414"
+            }
+        ],
+        "reviewed": true,
+        "standard_ratio": 81.41262,
+        "value": 0.8758758401712233
+    },
+    "S102IC2-": {
+        "error": 0.033559826825329944,
+        "fit": "Weighted Mean",
+        "references": [
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-422A",
+                "uuid": "NBG1410"
+            },
+            {
+                "exclude": "ok",
+                "record_id": "NBCocktail1-423A",
+                "uuid": "NBG1414"
+            }
+        ],
+        "reviewed": true,
+        "standard_ratio": 1.2009,
+        "value": 1.6463489041491126
+    }
+}
