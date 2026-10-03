@@ -1,42 +1,25 @@
-{
-		"IC0":{
-				"value":11.000005400000001,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":3.2659898958852072,
-				"errortype":"std"
-				},
-		"IC1":{
-				"value":11.200004900000001,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":2.5733717268333409,
-				"errortype":"std"
-				},
-		"IC2":{
-				"value":314.10396000000003,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":16.583218698645659,
-				"errortype":"std"
-				},
-		"IC3":{
-				"value":0,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":0,
-				"errortype":"std"
-				},
-		"FC":{
-				"value":-0.002947726888888889,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":2.84604108738983E-5,
-				"errortype":"std"
-				}
-		}
+ent in the product documentation would be appreciated but is 
+ not required.
+
+ 2. Altered source versions must be plainly marked as such, and must not be 
+ misrepresented as being the original software.
+
+ 3. This notice may not be removed or altered from any source distribution.
+-->
+<!--
+  NOTE: Compared to the iso_schematron_skeleton_for_saxon.xsl code, this version is currently missing
+     1) localization
+     2) properties
+     3) pattern/@documents
+
+  VERSION INFORMATION 
+   2009-02-25 RJ
+        * Fix up variable names so none are used twice in same template
+        * Tested on SAXON 9, Xalan 2.7.1. Partly tested MSXML.  
+   2008-09-19 RJ
+        * Add mode schematron-select-full-path and param full-path-notation 
+   
+   2008-08-11
+   		* TT report/@flag was missing
+   2008-08-06
+   	

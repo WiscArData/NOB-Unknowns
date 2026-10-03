@@ -1,162 +1,126 @@
-{
-    "Ar36": {
-        "error": 0.6714084046804915,
-        "error_type": "SEM",
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Linear",
-        "fn": 966,
-        "include_baseline_error": false,
-        "n": 967,
-        "outlier_excluded": [
-            886
-        ],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 65.94460550296186
-    },
-    "Ar36b": {
-        "error": 5.284559191623266,
-        "error_type": "SEM",
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Linear",
-        "fn": 20,
-        "include_baseline_error": false,
-        "n": 20,
-        "outlier_excluded": [],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 134.4773257317535
-    },
-    "Ar37": {
-        "error": 1.9210953555166963,
-        "error_type": "SEM",
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Linear",
-        "fn": 965,
-        "include_baseline_error": false,
-        "n": 967,
-        "outlier_excluded": [
-            429,
-            382
-        ],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 917.3942826461289
-    },
-    "Ar38": {
-        "error": 14.99488992082788,
-        "error_type": "SEM",
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Linear",
-        "fn": 20,
-        "include_baseline_error": false,
-        "n": 20,
-        "outlier_excluded": [],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 1644.972399614113
-    },
-    "Ar39": {
-        "error": 26.742605108257667,
-        "error_type": "SEM",
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Linear",
-        "fn": 985,
-        "include_baseline_error": false,
-        "n": 985,
-        "outlier_excluded": [],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 135695.42216740645
-    },
-    "Ar39b": {
-        "error": 20.3272,
-        "error_type": "SEM",
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 2
-        },
-        "fit": "linear",
-        "value": 5624.366225190838
-    },
-    "Ar40": {
-        "error": 17.57962385259612,
-        "error_type": "SEM",
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Linear",
-        "fn": 955,
-        "include_baseline_error": false,
-        "n": 985,
-        "outlier_excluded": [
-            257,
-            2,
-            19,
-            148,
-            22,
-            282,
-            929,
-            422,
-            46,
-            686,
-            179,
-            436,
-            53,
-            565,
-            819,
-            820,
-            823,
-            826,
-            319,
-            706,
-            460,
-            206,
-            467,
-            342,
-            217,
-            606,
-            96,
-            355,
-            485,
-            368
-        ],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 72090.11952732287
-    }
-}
+self.mktemp()
+        f = File(orig_name, 'w')
+        self.addCleanup(closer(f))
+        f.create_group('a')
+        f.close()
+
+        g = File(new_name, 'w')
+        self.addCleanup(closer(g))
+        g['link'] = ExternalLink(orig_name, '/')  # note root group
+        g.close()
+
+        h = File(new_name, 'r')
+        self.addCleanup(closer(h))
+        self.assertIsInstance(h['link']['a'], Group)
+
+
+class TestCopy(TestCase):
+
+    def setUp(self):
+        self.f1 = File(self.mktemp(), 'w')
+        self.f2 = File(self.mktemp(), 'w')
+
+    def tearDown(self):
+        if self.f1:
+            self.f1.close()
+        if self.f2:
+            self.f2.close()
+
+    @ut.skipIf(h5py.version.hdf5_version_tuple < (1,8,9),
+               "Bug in HDF5<1.8.8 prevents copying open dataset")
+    def test_copy_path_to_path(self):
+        foo = self.f1.create_group('foo')
+        foo['bar'] = [1,2,3]
+
+        self.f1.copy('foo', 'baz')
+        baz = self.f1['baz']
+        self.assertIsInstance(baz, Group)
+        self.assertArrayEqual(baz['bar'], np.array([1,2,3]))
+
+    @ut.skipIf(h5py.version.hdf5_version_tuple < (1,8,9),
+               "Bug in HDF5<1.8.8 prevents copying open dataset")
+    def test_copy_path_to_group(self):
+        foo = self.f1.create_group('foo')
+        foo['bar'] = [1,2,3]
+        baz = self.f1.create_group('baz')
+
+        self.f1.copy('foo', baz)
+        baz = self.f1['baz']
+        self.assertIsInstance(baz, Group)
+        self.assertArrayEqual(baz['foo/bar'], np.array([1,2,3]))
+
+        self.f1.copy('foo', self.f2['/'])
+        self.assertIsInstance(self.f2['/foo'], Group)
+        self.assertArrayEqual(self.f2['foo/bar'], np.array([1,2,3]))
+
+    @ut.skipIf(h5py.version.hdf5_version_tuple < (1,8,9),
+               "Bug in HDF5<1.8.8 prevents copying open dataset")
+    def test_copy_group_to_path(self):
+
+        foo = self.f1.create_group('foo')
+        foo['bar'] = [1,2,3]
+
+        self.f1.copy(foo, 'baz')
+        baz = self.f1['baz']
+        self.assertIsInstance(baz, Group)
+        self.assertArrayEqual(baz['bar'], np.array([1,2,3]))
+
+        self.f2.copy(foo, 'foo')
+        self.assertIsInstance(self.f2['/foo'], Group)
+        self.assertArrayEqual(self.f2['foo/bar'], np.array([1,2,3]))
+
+    @ut.skipIf(h5py.version.hdf5_version_tuple < (1,8,9),
+               "Bug in HDF5<1.8.8 prevents copying open dataset")
+    def test_copy_group_to_group(self):
+
+        foo = self.f1.create_group('foo')
+        foo['bar'] = [1,2,3]
+        baz = self.f1.create_group('baz')
+
+        self.f1.copy(foo, baz)
+        baz = self.f1['baz']
+        self.assertIsInstance(baz, Group)
+        self.assertArrayEqual(baz['foo/bar'], np.array([1,2,3]))
+
+        self.f1.copy(foo, self.f2['/'])
+        self.assertIsInstance(self.f2['/foo'], Group)
+        self.assertArrayEqual(self.f2['foo/bar'], np.array([1,2,3]))
+
+    @ut.skipIf(h5py.version.hdf5_version_tuple < (1,8,9),
+               "Bug in HDF5<1.8.8 prevents copying open dataset")
+    def test_copy_dataset(self):
+        self.f1['foo'] = [1,2,3]
+        foo = self.f1['foo']
+
+        self.f1.copy(foo, 'bar')
+        self.assertArrayEqual(self.f1['bar'], np.array([1,2,3]))
+
+        self.f1.copy('foo', 'baz')
+        self.assertArrayEqual(self.f1['baz'], np.array([1,2,3]))
+
+        self.f1.copy('foo', self.f2)
+        self.assertArrayEqual(self.f2['foo'], np.array([1,2,3]))
+
+        self.f2.copy(self.f1['foo'], self.f2, 'bar')
+        self.assertArrayEqual(self.f2['bar'], np.array([1,2,3]))
+
+    @ut.skipIf(h5py.version.hdf5_version_tuple < (1,8,9),
+               "Bug in HDF5<1.8.8 prevents copying open dataset")
+    def test_copy_shallow(self):
+
+        foo = self.f1.create_group('foo')
+        bar = foo.create_group('bar')
+        foo['qux'] = [1,2,3]
+        bar['quux'] = [4,5,6]
+
+        self.f1.copy(foo, 'baz', shallow=True)
+        baz = self.f1['baz']
+        self.assertIsInstance(baz, Group)
+        self.assertIsInstance(baz['bar'], Group)
+        self.assertEqual(len(baz['bar']), 0)
+        self.assertArrayEqual(baz['qux'], np.array([1,2,3]))
+
+        self.f2.copy(foo, 'foo', shallow=True)
+        self.assertIsInstance(self.f2['/foo'], Group)
+        self.assertIsInstance(self.f2['foo/bar'], Group)
+        self.assertEqua

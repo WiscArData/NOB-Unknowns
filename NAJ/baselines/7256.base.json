@@ -1,42 +1,25 @@
-{
-		"IC0":{
-				"value":1.2,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":1.0327955589886444,
-				"errortype":"std"
-				},
-		"IC1":{
-				"value":3.8888894444444446,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":2.0275881608454238,
-				"errortype":"std"
-				},
-		"IC2":{
-				"value":140.3008,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":9.673100158687495,
-				"errortype":"std"
-				},
-		"IC3":{
-				"value":0,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":0,
-				"errortype":"std"
-				},
-		"FC":{
-				"value":-0.003371866111111111,
-				"fit":"mean",
-				"filter_outliers_dict":[
-				],
-				"error":3.795118434727846E-5,
-				"errortype":"std"
-				}
-		}
+lmost_equal(clf.tree_.threshold[internal],
+                              clf2.tree_.threshold[internal])
+
+
+def test_sample_weight_invalid():
+    # Check sample weighting raises errors.
+    X = np.arange(100)[:, np.newaxis]
+    y = np.ones(100)
+    y[:50] = 0.0
+
+    clf = DecisionTreeClassifier(random_state=0)
+
+    sample_weight = np.random.rand(100, 1)
+    with pytest.raises(ValueError):
+        clf.fit(X, y, sample_weight=sample_weight)
+
+    sample_weight = np.array(0)
+    expected_err = r"Singleton.* cannot be considered a valid collection"
+    with pytest.raises(TypeError, match=expected_err):
+        clf.fit(X, y, sample_weight=sample_weight)
+
+
+def check_class_weights(name):
+    """Check class_weights resemble sample_weights behavior."""
+    TreeClassifier = CLF

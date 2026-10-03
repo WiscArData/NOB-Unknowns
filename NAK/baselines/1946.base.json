@@ -1,145 +1,105 @@
-{
-    "FC": {
-        "error": 4.7710586350992976e-05,
-        "errortype": "std",
-        "filter_outliers_dict": [],
-        "fit": "mean",
-        "value": -0.0034488541999999995
-    },
-    "IC0": {
-        "error": 1.0801234497346435,
-        "errortype": "std",
-        "filter_outliers_dict": [],
-        "fit": "mean",
-        "value": 1.5
-    },
-    "IC1": {
-        "error": 1.07496769977314,
-        "errortype": "std",
-        "filter_outliers_dict": [],
-        "fit": "mean",
-        "value": 2.6
-    },
-    "IC2": {
-        "error": 13.197738476656438,
-        "errortype": "std",
-        "filter_outliers_dict": [],
-        "fit": "mean",
-        "value": 85.200298
-    },
-    "IC3": {
-        "error": 0.42163702135578396,
-        "errortype": "std",
-        "filter_outliers_dict": [],
-        "fit": "mean",
-        "value": 0.2
-    },
-    "S101IC0-": {
-        "error": 0.34156502553198664,
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Average",
-        "fn": 10,
-        "include_baseline_error": false,
-        "n": 10,
-        "outlier_excluded": [],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 1.5
-    },
-    "S101IC1-": {
-        "error": 0.33993463423951903,
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Average",
-        "fn": 10,
-        "include_baseline_error": false,
-        "n": 10,
-        "outlier_excluded": [],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 2.6
-    },
-    "S101IC2-": {
-        "error": 4.173491346996369,
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Average",
-        "fn": 10,
-        "include_baseline_error": false,
-        "n": 10,
-        "outlier_excluded": [],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 85.20029830932617
-    },
-    "S101IC3-": {
-        "error": 0.13333333333333336,
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Average",
-        "fn": 10,
-        "include_baseline_error": false,
-        "n": 10,
-        "outlier_excluded": [],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 0.2
-    },
-    "S102IC1-": {
-        "error": 0.33993463423951903,
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Average",
-        "fn": 10,
-        "include_baseline_error": false,
-        "n": 10,
-        "outlier_excluded": [],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 2.6
-    },
-    "S102IC2-": {
-        "error": 4.173491346996369,
-        "filter_outliers_dict": {
-            "filter_outliers": true,
-            "iterations": 1,
-            "std_devs": 2,
-            "use_iqr_filtering": false,
-            "use_standard_deviation_filtering": true
-        },
-        "fit": "Average",
-        "fn": 10,
-        "include_baseline_error": false,
-        "n": 10,
-        "outlier_excluded": [],
-        "reviewed": true,
-        "user_excluded": [],
-        "value": 85.20029830932617
-    }
-}
+lmost_equal(clf.tree_.threshold[internal],
+                              clf2.tree_.threshold[internal])
+
+
+def test_sample_weight_invalid():
+    # Check sample weighting raises errors.
+    X = np.arange(100)[:, np.newaxis]
+    y = np.ones(100)
+    y[:50] = 0.0
+
+    clf = DecisionTreeClassifier(random_state=0)
+
+    sample_weight = np.random.rand(100, 1)
+    with pytest.raises(ValueError):
+        clf.fit(X, y, sample_weight=sample_weight)
+
+    sample_weight = np.array(0)
+    expected_err = r"Singleton.* cannot be considered a valid collection"
+    with pytest.raises(TypeError, match=expected_err):
+        clf.fit(X, y, sample_weight=sample_weight)
+
+
+def check_class_weights(name):
+    """Check class_weights resemble sample_weights behavior."""
+    TreeClassifier = CLF_TREES[name]
+
+    # Iris is balanced, so no effect expected for using 'balanced' weights
+    clf1 = TreeClassifier(random_state=0)
+    clf1.fit(iris.data, iris.target)
+    clf2 = TreeClassifier(class_weight='balanced', random_state=0)
+    clf2.fit(iris.data, iris.target)
+    assert_almost_equal(clf1.feature_importances_, clf2.feature_importances_)
+
+    # Make a multi-output problem with three copies of Iris
+    iris_multi = np.vstack((iris.target, iris.target, iris.target)).T
+    # Create user-defined weights that should balance over the outputs
+    clf3 = TreeClassifier(class_weight=[{0: 2., 1: 2., 2: 1.},
+                                        {0: 2., 1: 1., 2: 2.},
+                                        {0: 1., 1: 2., 2: 2.}],
+                          random_state=0)
+    clf3.fit(iris.data, iris_multi)
+    assert_almost_equal(clf2.feature_importances_, clf3.feature_importances_)
+    # Check against multi-output "auto" which should also have no effect
+    clf4 = TreeClassifier(class_weight='balanced', random_state=0)
+    clf4.fit(iris.data, iris_multi)
+    assert_almost_equal(clf3.feature_importances_, clf4.feature_importances_)
+
+    # Inflate importance of class 1, check against user-defined weights
+    sample_weight = np.ones(iris.target.shape)
+    sample_weight[iris.target == 1] *= 100
+    class_weight = {0: 1., 1: 100., 2: 1.}
+    clf1 = TreeClassifier(random_state=0)
+    clf1.fit(iris.data, iris.target, sample_weight)
+    clf2 = TreeClassifier(class_weight=class_weight, random_state=0)
+    clf2.fit(iris.data, iris.target)
+    assert_almost_equal(clf1.feature_importances_, clf2.feature_importances_)
+
+    # Check that sample_weight and class_weight are multiplicative
+    clf1 = TreeClassifier(random_state=0)
+    clf1.fit(iris.data, iris.target, sample_weight ** 2)
+    clf2 = TreeClassifier(class_weight=class_weight, random_state=0)
+    clf2.fit(iris.data, iris.target, sample_weight)
+    assert_almost_equal(clf1.feature_importances_, clf2.feature_importances_)
+
+
+@pytest.mark.parametrize("name", CLF_TREES)
+def test_class_weights(name):
+    check_class_weights(name)
+
+
+def check_class_weight_errors(name):
+    # Test if class_weight raises errors and warnings when expected.
+    TreeClassifier = CLF_TREES[name]
+    _y = np.vstack((y, np.array(y) * 2)).T
+
+    # Invalid preset string
+    clf = TreeClassifier(class_weight='the larch', random_state=0)
+    with pytest.raises(ValueError):
+        clf.fit(X, y)
+    with pytest.raises(ValueError):
+        clf.fit(X, _y)
+
+    # Not a list or preset for multi-output
+    clf = TreeClassifier(class_weight=1, random_state=0)
+    with pytest.raises(ValueError):
+        clf.fit(X, _y)
+
+    # Incorrect length list for multi-output
+    clf = TreeClassifier(class_weight=[{-1: 0.5, 1: 1.}], random_state=0)
+    with pytest.raises(ValueError):
+        clf.fit(X, _y)
+
+
+@pytest.mark.parametrize("name", CLF_TREES)
+def test_class_weight_errors(name):
+    check_class_weight_errors(name)
+
+
+def test_max_leaf_nodes():
+    # Test greedy trees with max_depth + 1 leafs.
+    X, y = datasets.make_hastie_10_2(n_samples=100, random_state=1)
+    k = 4
+    for name, TreeEstimator in ALL_TREES.items():
+        est = TreeEstimator(max_depth=None, max_leaf_nodes=k + 1).fit(X, y)
+        assert est.g

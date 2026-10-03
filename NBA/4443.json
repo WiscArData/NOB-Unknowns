@@ -1,132 +1,91 @@
 {
-		"analysisID":74630,
-		"acquisition_software":"",
-		"admit_delay":-19.5,
-		"aliquot":1,
-		"analysis_type":"unknown",
-		"analyist_name":"",
-		"collection_version":"C:NU NOBLEANALYSESARGON2STEPS_15.MDF",
-		"comment":"",
-		"commit":"",
-		"conditionals":[
-		],
-		"data_reduction_software":"ArData",
-		"detectors":{
-				"IC0":{
-						"deflection":[
-						],
-						"gain":[
-						]
-						},
-				"IC1":{
-						"deflection":[
-						],
-						"gain":[
-						]
-						},
-				"IC2":{
-						"deflection":[
-						],
-						"gain":[
-						]
-						},
-				"IC3":{
-						"deflection":[
-						],
-						"gain":[
-						]
-						},
-				"FC":{
-						"deflection":[
-						],
-						"gain":[
-						]
-						}
-				},
-		"environmental":{
-				"lab_humiditys":[
-				],
-				"lab_pneumatics":[
-				],
-				"lab_temperatures":[
-				]
-				},
-		"experiment_queue_name":"",
-		"extraction":"",
-		"identifier":"UW157:AS07",
-		"increment":0,
-		"instrument_name":"",
-		"intensity_scalar":"1.0",
-		"irradiation":"UW157",
-		"irradiation_level":"A",
-		"irradiation_position":34,
-		"isotopes":{
-				"Ar40":{
-						"detector":"S101IC0-",
-						"name":"Ar40",
-						"serial_id":"00000",
-						"units":"cps"
-						},
-				"Ar39":{
-						"detector":"S101IC1-",
-						"name":"Ar39",
-						"serial_id":"00000",
-						"units":"cps"
-						},
-				"Ar37":{
-						"detector":"S101IC2-",
-						"name":"Ar37",
-						"serial_id":"00000",
-						"units":"cps"
-						},
-				"Ar36":{
-						"detector":"S101IC3-",
-						"name":"Ar36",
-						"serial_id":"00000",
-						"units":"cps"
-						},
-				"Ar38":{
-						"detector":"S102IC1-",
-						"name":"Ar38",
-						"serial_id":"00000",
-						"units":"cps"
-						},
-				"Ar36b":{
-						"detector":"S102IC2-",
-						"name":"Ar36b",
-						"serial_id":"00000",
-						"units":"cps"
-						},
-				"Ar39b":{
-						"detector":"S102IC0-",
-						"name":"Ar39b",
-						"serial_id":"00000",
-						"units":"cps"
-						}
-				},
-		"laboratory":"",
-		"mass_spectrometer":"NOB",
-		"material":"Sanidine",
-		"measurement":"",
-		"post_equilibration":"",
-		"post_measurement":"",
-		"principal_investigator":"WiscArLab",
-		"project":"UW157",
-		"queue_conditionals_name":"",
-		"repository_identifier":"NOB-Unknowns",
-		"sample":"ACs",
-		"source":{
-				"emission":[
-				],
-				"trap":[
-				]
-				},
-		"spec_sha":"",
-		"timestamp":"2021-11-27 22:22:02",
-		"tripped_conditional":[
-		],
-		"username":"",
-		"uuid":"NBA4443",
-		"whiff_result":[
-		]
-		}
+    "FC": {
+        "error": 3.3191365935954574e-05,
+        "errortype": "std",
+        "filter_outliers_dict": [],
+        "fit": "mean",
+        "value": -0.002906558222222222
+    },
+    "IC0": {
+        "error": 3.190266718215899,
+        "errortype": "std",
+        "filter_outliers_dict": [],
+        "fit": "mean",
+        "value": 12.2000056
+    },
+    "IC1": {
+        "error": 2.7968255020465214,
+        "errortype": "std",
+        "filter_outliers_dict": [],
+        "fit": "mean",
+        "value": 7.600002000000001
+    },
+    "IC2": {
+        "error": 13.70983167166703,
+        "errortype": "std",
+        "filter_outliers_dict": [],
+        "fit": "mean",
+        "value": 122.20061000000001
+    },
+    "IC3": {
+        "error": 0,
+        "errortype": "std",
+        "filter_outliers_dict": [],
+        "fit": "mean",
+        "value": 0
+    },
+    "S101IC0-": {
+        "error": 1.008850862298115,
+        "error_type": "SEM",
+        "filter_outliers_dict": {
+            "filter_outliers": true,
+            "iterations": 1,
+            "std_devs": 2,
+            "use_iqr_filtering": false,
+            "use_standard_deviation_filtering": true
+        },
+        "fit": "average",
+        "fn": 10,
+        "include_baseline_error": false,
+        "n": 10,
+        "outlier_excluded": [],
+        "reviewed": true,
+        "user_excluded": [],
+        "value": 12.200005340576173
+    },
+    "S101IC1-": {
+        "error": 0.8844338525156277,
+        "error_type": "SEM",
+        "filter_outliers_dict": {
+            "filter_outliers": true,
+            "iterations": 1,
+            "std_devs": 2,
+            "use_iqr_filtering": false,
+            "use_standard_deviation_filtering": true
+        },
+        "fit": "average",
+        "fn": 10,
+        "include_baseline_error": false,
+        "n": 10,
+        "outlier_excluded": [],
+        "reviewed": true,
+        "user_excluded": [],
+        "value": 7.6000019073486325
+    },
+    "S101IC2-": {
+        "error": 4.335429118333157,
+        "error_type": "SEM",
+        "filter_outliers_dict": {
+            "filter_outliers": true,
+            "iterations": 1,
+            "std_devs": 2,
+            "use_iqr_filtering": false,
+            "use_standard_deviation_filtering": true
+        },
+        "fit": "average",
+        "fn": 10,
+        "include_baseline_error": false,
+        "n": 10,
+        "outlier_excluded": [],
+        "reviewed": true,
+        "user_
